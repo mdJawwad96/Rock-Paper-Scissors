@@ -6,6 +6,7 @@
 </head>
 <body>
   <script>
+    // COMPUTER'S PLAY SECTION
     function computerPlay() {
         let comp_choice;
         let rand_num = [Math.floor(Math.random() * 3 + 1)]
@@ -17,7 +18,42 @@
         return comp_choice;
     }
 
-    function  playRound(playerSelection, computerSelection)
+    // COMPUTER VS PLAYER SECTION
+    function  playRound() {
+    
+        let playerSelection =  prompt('Rock, Paper, Scissors');
+        let computerSelection = computerPlay();
+
+        if (playerSelection == computerSelection) {
+            return "Its a tie, try again twin brothers"
+        } else {
+            switch (true) {
+                case computerSelection == 'Rock' && playerSelection == 'Paper':
+                return "You won,Your Paper beated the Computer's Rock.";
+                break;
+
+                case computerSelection == 'Rock' && playerSelection == 'Scissors':
+                return "You Lost, Computer's rock beated Your Scissors.";
+                break;
+
+                case computerSelection == 'Paper' && playerSelection == 'Rock':
+                return "You Lost, Computer's paper beated Your rock";
+                break;
+
+                case computerSelection == 'Paper' && playerSelection == 'Scissors':
+                return "You won, Your Scissors beated the computer's paper.";
+                break;
+
+                case computerSelection == 'Scissors' && playerSelection == 'Paper':
+                return "You Lost, Computer's scissors beated Your paper";
+                break;
+
+                case computerSelection == 'Scissors' && playerSelection == 'Rock':
+                return "You won, Your rock beated the computer's Scissors.";
+                break;
+            }
+        }
+    }
       
       /*  let comp_choice;
     let rand_num = Math.round(Math.random() * 2 + 1);
