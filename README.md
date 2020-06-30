@@ -1,0 +1,1 @@
+Rock Paper Scissors is project from The Odin Project course Web Develpoment 101 and this is my first JavaScript Project.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    function computerPlay() {
+        let comp_choice;
+        let rand_num = [Math.floor(Math.random() * 3 + 1)]
+        rand_num == 1 ? comp_choice = "Rock" :
+        rand_num == 2 ? comp_choice = "Paper":
+        rand_num == 3 ? comp_choice = "Scissors":
+        "Oops something is wrong"
+
+        return comp_choice;
+    }
+
+    function  playRound(playerSelection, computerSelection)
+      
+      /*  let comp_choice;
+    let rand_num = Math.round(Math.random() * 2 + 1);
+    switch (true) {
+        case rand_num == 1:
+            comp_choice = "Rock";
+            break;
+        case rand_num == 2:
+            comp_choice = "Paper";
+            break;
+        case rand_num == 3:
+            comp_choice = "Scissors";
+            break;
+        default:
+            comp_choice = "default";
+    } 
+
+    return comp_choice;
+}  */
+       
+       
+       /* let compPly = ['Rock', 'Paper', 'Scissor'];
+        let randOutcm = [Math.floor(Math.random * 3)];
+        if (randOutcm == 0) {
+            comPly = 'Rock';
+        } else if (randOutcm == 1) {
+            comPly = 'Paper';
+        } else if (randOutcm == 2) {
+            comPly = 'Scissor';
+        } else {
+            'Oops Something is Wrongs Bud!'
+        }
+        
+        return compPly;
+        //console.log(compPly[randOutcm]);
+    }*/
+    //console.log("Hello, World!")
+  </script>
+</body>
+</html>
