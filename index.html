@@ -15,7 +15,7 @@
         rand_num == 3 ? comp_choice = "Scissors":
         "Oops something is wrong"
 
-        return comp_choice;
+        return comp_choice.toLowerCase();
     }
 
     // COMPUTER VS PLAYER SECTION
@@ -28,32 +28,43 @@
             return "Its a tie, try again twin brothers"
         } else {
             switch (true) {
-                case computerSelection == 'Rock' && playerSelection == 'Paper':
+                case computerSelection == 'rock' && playerSelection == 'paper':
                 return "You won,Your Paper beated the Computer's Rock.";
                 break;
 
-                case computerSelection == 'Rock' && playerSelection == 'Scissors':
+                case computerSelection == 'rock' && playerSelection == 'scissors':
                 return "You Lost, Computer's rock beated Your Scissors.";
                 break;
 
-                case computerSelection == 'Paper' && playerSelection == 'Rock':
+                case computerSelection == 'paper' && playerSelection == 'rock':
                 return "You Lost, Computer's paper beated Your rock";
                 break;
 
-                case computerSelection == 'Paper' && playerSelection == 'Scissors':
+                case computerSelection == 'paper' && playerSelection == 'scissors':
                 return "You won, Your Scissors beated the computer's paper.";
                 break;
 
-                case computerSelection == 'Scissors' && playerSelection == 'Paper':
+                case computerSelection == 'scissors' && playerSelection == 'paper':
                 return "You Lost, Computer's scissors beated Your paper";
                 break;
 
-                case computerSelection == 'Scissors' && playerSelection == 'Rock':
+                case computerSelection == 'scissors' && playerSelection == 'rock':
                 return "You won, Your rock beated the computer's Scissors.";
                 break;
             }
         }
+
+        playRound();
+        playRound();
+        playRound();
+        playRound();
     }
+
+        function game() {
+            let playerSelection = prompt('Rock, Paper, Scissors').toLowerCase();
+            let computerSelection = computerPlay();
+            console.log(playRound(playerSelection, computerSelection));
+        }
       
       /*  let comp_choice;
     let rand_num = Math.round(Math.random() * 2 + 1);
